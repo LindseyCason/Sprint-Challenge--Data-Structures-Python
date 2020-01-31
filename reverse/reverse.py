@@ -42,6 +42,19 @@ class LinkedList:
     # if we've gotten here, then the target node isn't in our list
     return False
 
+#Head 3,2,1, Tail .     Tail1,2,3,4,5Head
   def reverse_list(self):
-    # TO BE COMPLETED
-    pass
+    # TO BE COMPLETED    
+    #head is 5
+    #5,4,3,2,1
+      if self.head is None: 
+          return
+          #If empty, return
+
+      node = self.head #set node to original head
+      while node.get_next():#while there is a node...
+         self.add_to_head(node.get_next().value)
+         #add value of the next node to the head, once there is no next node, we break
+         #node now = the next node
+         node = node.get_next()
+        #this repeats until all of the nodes are reversed.
